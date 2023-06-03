@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
   title = 'Giochino';
 
   ngOnInit(){
-    this.router.navigate(['/game']);
+    this.router.navigate(['/home']);
   }
 }
