@@ -1,12 +1,5 @@
-.row{
-    padding:0;
-    width: 330px;
-    box-shadow: inset black 1px 1px 10px 1px;
-}
 
-.cell{
-    display: inline-block;
-}
+.cell{display: inline-block;}
 
 .btn{
     padding: 0;
@@ -15,6 +8,21 @@
 
 .btn-prymary{padding:0}
 
-.transp{
-    opacity: 0;
+.transp{opacity: 0;}
+
+.counter{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: inset rgb(104, 45, 16) 3px 3px 8px .1px; 
+    width: 20vw;
+    margin-top: 30px;
+    height: 60px;
+    background-color: rgb(211, 131, 91);
+    border:2px solid rgb(121, 67, 12);
+}
+
+.labelClass{
+    margin-top: 5px;
 }

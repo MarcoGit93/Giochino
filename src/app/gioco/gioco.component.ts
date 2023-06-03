@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WidgetService } from '../widget.service';
 
 
 export interface SquaresToSwitch{
@@ -17,13 +18,14 @@ export interface SquaresToSwitch{
 })
 export class GiocoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private widgetService: WidgetService) { }
 
   numeri:string[] = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','']
   Squares:SquaresToSwitch ={x:0,x1:0,y:0,y1:0};
   emptyPos?:number;
+  numeroMosse:number = 0;
 
- 
+  
   ngOnInit(): void {
     this.emptyPos = this.findEmptySpace();
     this.Squares.x1 = this.emptyPos%4 +1;
@@ -33,7 +35,8 @@ export class GiocoComponent implements OnInit {
   getPos(posizione: number ){
     this.Squares.x =  posizione%4 +1
     this.Squares.y = Math.floor((posizione+0.99)/4) +1;
-    (this.Squares.x == this.Squares.x1) !== (this.Squares.y == this.Squares.y1) ? this.funzionePerMuovere(this.numeri, posizione): ''; 
+    (this.Squares.x == this.Squares.x1) !== (this.Squares.y == this.Squares.y1) ? this.funzionePerMuovere(this.numeri, posizione): '';
+    this.numeroMosse = this.widgetService.getNumeroMosse(); 
   }
 
   findEmptySpace():number{
@@ -86,5 +89,7 @@ export class GiocoComponent implements OnInit {
    this.emptyPos = this.findEmptySpace();
    this.Squares.x1 = this.emptyPos%4 +1;
    this.Squares.y1 = Math.floor((this.emptyPos+0.99)/4) +1
+   this.widgetService.aumentaMosse();
+   this.numeroMosse = this.widgetService.getNumeroMosse();
   }
 }
