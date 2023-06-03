@@ -1,0 +1,20 @@
+.row{
+    padding:0;
+    width: 330px;
+    box-shadow: inset black 1px 1px 10px 1px;
+}
+
+.cell{
+    display: inline-block;
+}
+
+.btn{
+    padding: 0;
+    border: none;
+}
+
+.btn-prymary{padding:0}
+
+.transp{
+    opacity: 0;
+}

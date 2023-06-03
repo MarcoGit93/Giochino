@@ -1,0 +1,10 @@
+<div class="home">
+    <div class="gameC">
+       
+            <div *ngFor="let num of numeri; index as i" class="cell">
+
+                <app-cell [ngClass]="{'transp' : num=='' }"  [num]="num" class="btn" (click)="getPos(i)" ></app-cell>
+            </div>
+       
+    </div>
+</div>

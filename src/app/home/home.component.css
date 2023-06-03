@@ -1,0 +1,9 @@
+
+.stB{
+    border: none;
+    background-color: rgb(88, 40, 16);
+    width: 300px;
+    height: 300px;
+    box-shadow: 3px 3px 16px 7px inset black ;
+    box-shadow: 3px 3px 16px 7px  black ;
+}

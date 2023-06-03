@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+.home{
+    margin: auto; 
+    box-shadow: inset 0px 0px 15px 30px rgb(119, 58, 18);
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+  
+    }
+
+.gameB{
+    padding: 47px;
+    border-radius: 10px;
+    
+}
+
+.gameC{
+    height: 330px;
+    width: 330px;
+    box-shadow: 0px 0px 25px 20px black;
+    margin-left: 35px;
+    margin-top: 35px;
+    display: table-caption;
+    border-radius: 10px;
+    background-color: rgb(28, 15, 7);
+}
+
+body{  background-color:  rgba(65, 41, 25, 0.3);}
+
