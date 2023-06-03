@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { GiocoComponent } from './gioco/gioco.component';
 import { CellComponent } from './cell/cell.component';
 import { WidgetService } from './widget.service';
+import { TableService } from './table.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { WidgetService } from './widget.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [WidgetService],
+  providers: [WidgetService,TableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,5 +10,9 @@ export class WidgetService{
         return this.numeroMosse;
     }
 
+    resetCounter(){
+        this.numeroMosse = 0;
+    }
+
 
 }

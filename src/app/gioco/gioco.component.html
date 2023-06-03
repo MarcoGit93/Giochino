@@ -1,5 +1,8 @@
-<div class="home">
-    <div class="gameC">
+<div class="home" >
+    <div class="bannerWin" *ngIf="win==true">
+        <p class="winLabel">HAI VINTO </p>
+    </div>
+    <div class="gameC" [ngClass]=" win == true ? 'win' : ''">
        
             <div *ngFor="let num of numeri; index as i" class="cell">
 
@@ -7,7 +10,7 @@
             </div>
        
     </div>
-
+   
    
 </div>
 

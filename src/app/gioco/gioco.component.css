@@ -26,3 +26,26 @@
 .labelClass{
     margin-top: 5px;
 }
+
+.win{
+    opacity: 0.1;
+}
+
+.bannerWin{
+    width: 400px;
+    height: 400px;
+    font-size: 50px;
+    font-weight: bolder;
+    position: absolute;
+}
+
+
+.winLabel{
+    margin: auto;
+    color: aqua;
+    height: 400px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    text-shadow: 5px 5px 5px  black;
+}
