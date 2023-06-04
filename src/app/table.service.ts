@@ -1,6 +1,7 @@
 import { compileInjectable } from "@angular/compiler";
-import { Injectable } from "@angular/core";
+import { Injectable, OnInit } from "@angular/core";
 import { WidgetService } from "./widget.service";
+import { SettingService } from "./settings.service";
 
 
 export interface SquaresToSwitch{
@@ -14,27 +15,45 @@ export interface SquaresToSwitch{
 
 
 @Injectable()
-export class TableService{
+export class TableService implements OnInit{
 
-constructor(private  widgetService:WidgetService) { }
+constructor(private  widgetService:WidgetService, private settingService: SettingService) { }
 
   Squares:SquaresToSwitch ={x:0,x1:0,y:0,y1:0};
-  numeri:string[] = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','']
+ // numeri:string[] = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','']
+  numeri:string[] = [];
   winCondition:string[] = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','']
   emptyPos?:number;
   numeroMosse:number = 0;
+  dimensioneTabella:number = 4;
+
+  ngOnInit(): void {
+    this.dimensioneTabella = this.settingService.getDimensionOfSquare();
+    this.initTableDimension(this.dimensioneTabella)
+  }
+
+  initTableDimension(dimension:number){
+    console.log("initSpce")
+    for(let i = 1; i<= dimension*dimension-1; i++){
+      this.numeri.push(i.toString())
+      this.winCondition.push(i.toString())
+    }
+    this.numeri.push('');
+    this.winCondition.push('')
+  }
 
   getAllPosition():string[]{
     return this.numeri;
   }
 
   initGame(){
+    this.ngOnInit();
     this.setEmptyCell();
     let i = 0;
       while(i<100){
-        let randPos = Math.floor(Math.random()*100%16)
-        this.Squares.x =  randPos%4 +1
-        this.Squares.y = Math.floor((randPos+0.99)/4) +1;
+        let randPos = Math.floor(Math.random()*100%(this.dimensioneTabella*this.dimensioneTabella))
+        this.Squares.x =  randPos%this.dimensioneTabella +1
+        this.Squares.y = Math.floor((randPos+0.99)/this.dimensioneTabella) +1;
         (this.Squares.x == this.Squares.x1) !== (this.Squares.y == this.Squares.y1) ?( i++,this.funzionePerMuovere(this.numeri, randPos)): '';
       }
       this.widgetService.resetCounter();
@@ -47,8 +66,8 @@ constructor(private  widgetService:WidgetService) { }
       setEmptyCell(){
 
         this.emptyPos = this.findEmptySpace();
-        this.Squares.x1 = this.emptyPos%4 +1;
-        this.Squares.y1 = Math.floor((this.emptyPos+0.99)/4) +1
+        this.Squares.x1 = this.emptyPos%this.dimensioneTabella +1;
+        this.Squares.y1 = Math.floor((this.emptyPos+0.99)/this.dimensioneTabella) +1
 
       }
 
@@ -65,17 +84,17 @@ constructor(private  widgetService:WidgetService) { }
          if(this.Squares.x == this.Squares.x1  ) {
           if( diffY > 0){
               while(diffY > 0){         
-                let app = currentState[pos + 4*( diffY - 1)] 
-                currentState[pos + 4*( diffY - 1)] = '';
-                currentState[pos +4*(diffY) ] = app;
+                let app = currentState[pos + this.dimensioneTabella*( diffY - 1)] 
+                currentState[pos + this.dimensioneTabella*( diffY - 1)] = '';
+                currentState[pos +this.dimensioneTabella*(diffY) ] = app;
                 diffY--;
               }
           }else{
             
             while(diffY < 0){
-              let app = currentState[ pos + 4*(diffY+1)] 
-              currentState[ pos + 4*(diffY+1)] = '';
-              currentState[ pos +4*(diffY)] = app;
+              let app = currentState[ pos + this.dimensioneTabella*(diffY+1)] 
+              currentState[ pos + this.dimensioneTabella*(diffY+1)] = '';
+              currentState[ pos +this.dimensioneTabella*(diffY)] = app;
               diffY++;
             }
       

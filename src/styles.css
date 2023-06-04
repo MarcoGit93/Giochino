@@ -1,12 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-.home{
+.home4{
     margin: auto; 
     box-shadow: inset 0px 0px 15px 30px rgb(119, 58, 18);
     width: 400px;
     height: 400px;
     border-radius: 10px;
   
-    }
+}
+
+.home5{
+    margin: auto; 
+    box-shadow: inset 0px 0px 15px 30px rgb(119, 58, 18);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+
+.home6{
+    margin: auto; 
+    box-shadow: inset 0px 0px 15px 30px rgb(119, 58, 18);
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+}
 
 .gameB{
     padding: 47px;
@@ -14,7 +31,7 @@
     
 }
 
-.gameC{
+.gameC4{
     height: 330px;
     width: 330px;
     box-shadow: 0px 0px 25px 20px black;
@@ -24,6 +41,32 @@
     border-radius: 10px;
     background-color: rgb(28, 15, 7);
 }
+
+
+.gameC5{
+    height: 415px;
+    width: 415px;
+    box-shadow: 0px 0px 25px 20px black;
+    margin-left: 45px;
+    margin-top: 45px;
+    display: table-caption;
+    border-radius: 10px;
+    background-color: rgb(28, 15, 7);
+}
+
+
+
+.gameC6{
+    height: 493px;
+    width: 493px;
+    box-shadow: 0px 0px 25px 20px black;
+    margin-left: 55px;
+    margin-top: 55px;
+    display: table-caption;
+    border-radius: 10px;
+    background-color: rgb(28, 15, 7);
+}
+
 
 body{  background-color:  rgba(70, 44, 26, 0.648);}
 
