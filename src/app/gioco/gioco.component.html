@@ -1,8 +1,8 @@
-<div class="home" [ngClass]="settingNumber == 4 ? 'home4' : (settingNumber == 5 ?  'home5' : 'home6' ) ">
+<div  [ngClass]="[settingNumber == 4 ? 'home4' : (settingNumber == 5 ?  'home5' : 'home6' ),win==true ? 'win' : '' ]" >
     <div class="bannerWin" *ngIf="win==true">
         <p class="winLabel">HAI VINTO </p>
     </div>
-    <div class="gameC" [ngClass]=" settingNumber == 4 ? 'gameC4' : (settingNumber == 5 ?  'gameC5' : 'gameC6' )">
+    <div  [ngClass]=" settingNumber == 4 ? 'gameC4' : (settingNumber == 5 ?  'gameC5' : 'gameC6' )">
        
             <div *ngFor="let num of numeri; index as i" class="cell">
 
