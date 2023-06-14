@@ -26,6 +26,7 @@ constructor(private  widgetService:WidgetService, private settingService: Settin
   numeroMosse:number = 0;
   dimensioneTabella:number = 4;
 
+
   ngOnInit(): void {
     this.dimensioneTabella = this.settingService.getDimensionOfSquare();
     this.initTableDimension(this.dimensioneTabella)
@@ -33,6 +34,8 @@ constructor(private  widgetService:WidgetService, private settingService: Settin
 
   initTableDimension(dimension:number){
     console.log("initSpce")
+    this.numeri = [];
+    this.winCondition = []
     for(let i = 1; i<= dimension*dimension-1; i++){
       this.numeri.push(i.toString())
       this.winCondition.push(i.toString())
