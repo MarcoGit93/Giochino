@@ -20,9 +20,8 @@ export class TableService implements OnInit{
 constructor(private  widgetService:WidgetService, private settingService: SettingService) { }
 
   Squares:SquaresToSwitch ={x:0,x1:0,y:0,y1:0};
- // numeri:string[] = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','']
   numeri:string[] = [];
-  winCondition:string[] = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','']
+  winCondition:string[] = []
   emptyPos?:number;
   numeroMosse:number = 0;
   dimensioneTabella:number = 4;
@@ -33,7 +32,9 @@ constructor(private  widgetService:WidgetService, private settingService: Settin
   }
 
   initTableDimension(dimension:number){
-    console.log("initSpce")
+    this.numeri = []
+    this.winCondition = []
+    
     for(let i = 1; i<= dimension*dimension-1; i++){
       this.numeri.push(i.toString())
       this.winCondition.push(i.toString())
