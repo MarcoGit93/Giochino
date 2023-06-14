@@ -32,9 +32,7 @@ constructor(private  widgetService:WidgetService, private settingService: Settin
   }
 
   initTableDimension(dimension:number){
-    this.numeri = []
-    this.winCondition = []
-    
+    console.log("initSpce")
     for(let i = 1; i<= dimension*dimension-1; i++){
       this.numeri.push(i.toString())
       this.winCondition.push(i.toString())

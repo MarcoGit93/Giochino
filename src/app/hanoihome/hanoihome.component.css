@@ -1,0 +1,15 @@
+.hanoiHomeStyle{
+    margin-top: 20PX;
+    box-shadow: inset 0px 0px 8px 12px rgba(158, 211, 255, 0.4);
+    border-radius: 10px;
+    height: 600px;
+    width: 800px;
+    margin-right: 10px;
+    background-color: rgb(199, 244, 255,0.2);
+}
+
+
+.towerContainer{
+    height: 580px;
+    margin-top: 10px;
+}

@@ -10,6 +10,10 @@ import { WidgetService } from './widget.service';
 import { TableService } from './table.service';
 import { SettingService } from './settings.service';
 import { SettingsComponent } from './settings/settings.component';
+import { HanoihomeComponent } from './hanoihome/hanoihome.component';
+import { HanoiTowerComponent } from './hanoi-tower/hanoi-tower.component';
+import { HanoiDiskComponent } from './hanoi-disk/hanoi-disk.component';
+import { HanoiTowerService } from './hanoiTower.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,9 @@ import { SettingsComponent } from './settings/settings.component';
     GiocoComponent,
     CellComponent,
     SettingsComponent,
+    HanoihomeComponent,
+    HanoiTowerComponent,
+    HanoiDiskComponent,
   
 
   ],
@@ -27,7 +34,7 @@ import { SettingsComponent } from './settings/settings.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [WidgetService,TableService,SettingService],
+  providers: [WidgetService,TableService,SettingService,HanoiTowerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

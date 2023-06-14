@@ -1,0 +1,14 @@
+<div class="row gameContainer">
+        <div class="hanoiHomeStyle">
+            <div class="col-sm-4 btn btn-ligth towerContainer" (click)="setSwitchElement(this.towerOne)">
+                <app-hanoi-tower [towerCurrentState]="this.towerOne"></app-hanoi-tower>
+            </div>
+            <div class="col-sm-4 btn btn-ligth towerContainer"  (click)="setSwitchElement(this.towerTwo)">
+                <app-hanoi-tower [towerCurrentState]="this.towerTwo" ></app-hanoi-tower>
+            </div>
+             <div class="col-sm-4 btn btn-ligth towerContainer" (click)="setSwitchElement(this.towerThree)" >
+                <app-hanoi-tower [towerCurrentState]="this.towerThree"></app-hanoi-tower>
+            </div>
+            
+        </div>
+</div>
