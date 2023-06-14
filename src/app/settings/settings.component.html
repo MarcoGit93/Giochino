@@ -1,21 +1,24 @@
 
-<div class="home4 row">
-  <div class="settingContainer">
-    <label class="col-sm-12 centeredLabel">Seleziona la dimensione della tabella </label>
-    <div class="form-check form-check-inline inline col-sm-1">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="4" [(ngModel)]="selectedDim" (ngModelChange)="onSubmit()"  >
-        <label class="form-check-label" for="inlineRadio1">4x4</label>
-      </div>
-      <div class="form-check form-check-inline inline col-sm-1">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="5" [(ngModel)]="selectedDim" (ngModelChange)="onSubmit()">
-        <label class="form-check-label" for="inlineRadio2">5x5</label>
-      </div>
-      <div class="form-check form-check-inline inline col-sm-1">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="6" [(ngModel)]="selectedDim" (ngModelChange)="onSubmit()" >
-        <label class="form-check-label" for="inlineRadio3">6x6</label>
-      </div>
-      <button class="btn btn-primary col-sm-6 centered" (submit)="onSubmit()" routerLink="/home">Salva impostazioni</button>
 
-  </div>
+<div class="gameContainer">
+  <div class="home4 row">
+    <div class="settingContainer">
+      <label class="col-sm-12 centeredLabel">Seleziona la dimensione della tabella </label>
+      <div class="form-check form-check-inline inline col-sm-1">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="4" [(ngModel)]="selectedDim" (ngModelChange)="onSubmit()"  >
+          <label class="form-check-label" for="inlineRadio1">4x4</label>
+        </div>
+        <div class="form-check form-check-inline inline col-sm-1">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="5" [(ngModel)]="selectedDim" (ngModelChange)="onSubmit()">
+          <label class="form-check-label" for="inlineRadio2">5x5</label>
+        </div>
+        <div class="form-check form-check-inline inline col-sm-1">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="6" [(ngModel)]="selectedDim" (ngModelChange)="onSubmit()" >
+          <label class="form-check-label" for="inlineRadio3">6x6</label>
+        </div>
+        <button class="btn btn-primary col-sm-6 centered" (submit)="onSubmit()" routerLink="/home">Salva impostazioni</button>
   
+    </div>
+    
+  </div>
 </div>

@@ -1,11 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+.gameContainer{
+    justify-content: center;
+    display: flex;
+    margin:0;
+}
 .home4{
-    margin: auto; 
+    
     box-shadow: inset 0px 0px 15px 30px rgb(119, 58, 18);
-    width: 400px;
-    height: 400px;
     border-radius: 10px;
-  
+    height: 400px;
+    width: 400px;
+    margin-right: 10px;
 }
 
 .home5{
@@ -23,6 +29,7 @@
     width: 600px;
     height: 600px;
     border-radius: 10px;
+    
 }
 
 .gameB{
@@ -70,3 +77,7 @@
 
 body{  background-color:  rgba(70, 44, 26, 0.648);}
 
+
+body{  
+    background-color:  rgba(255, 219, 172, 0.336) !important;
+}

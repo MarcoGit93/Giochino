@@ -1,18 +1,21 @@
-<div  [ngClass]="[settingNumber == 4 ? 'home4' : (settingNumber == 5 ?  'home5' : 'home6' ),win==true ? 'win' : '' ]" >
-    <div class="bannerWin" *ngIf="win==true">
-        <p class="winLabel">HAI VINTO </p>
-    </div>
-    <div  [ngClass]=" settingNumber == 4 ? 'gameC4' : (settingNumber == 5 ?  'gameC5' : 'gameC6' )">
+<div class="row gameContainer ">
+    <div  [ngClass]="[settingNumber == 4 ? 'home4' : (settingNumber == 5 ?  'home5' : 'home6' ),win==true ? 'win' : '' ]" >
+        <div class="bannerWin" *ngIf="win==true">
+            <p class="winLabel">HAI VINTO </p>
+        </div>
+        <div  [ngClass]=" settingNumber == 4 ? 'gameC4' : (settingNumber == 5 ?  'gameC5' : 'gameC6' )">
+           
+                <div *ngFor="let num of numeri; index as i" class="cell">
+    
+                    <app-cell [ngClass]="{'transp' : num=='' }"  [num]="num" class="btn" (click)="getPos(i)" ></app-cell>
+                </div>
+           
+        </div>
+    
        
-            <div *ngFor="let num of numeri; index as i" class="cell">
-
-                <app-cell [ngClass]="{'transp' : num=='' }"  [num]="num" class="btn" (click)="getPos(i)" ></app-cell>
-            </div>
-       
     </div>
-
-   
 </div>
+
 
    
 <div class="container counter">
